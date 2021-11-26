@@ -3,6 +3,26 @@
     padding: 0;
 }
 
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgb(126, 126, 238);
+    p {
+        text-align: center;
+    }
+}
+
 .container {
     width: 90%;
     overflow-y: auto;
