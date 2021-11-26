@@ -29,8 +29,8 @@ export class NuevoComponent implements OnInit {
       });
 
       // customize default values of alerts used by this component tree
-      alertConfig.type = 'success';
-      alertConfig.dismissible = false;
+      this.alertConfig.type = 'success';
+      this.alertConfig.dismissible = false;
    }
 
   ngOnInit(): void {

@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  public competencias: string[] = [
+    'HTML',
+    'SCSS',
+    'JavaScript',
+    'TypeScript',
+    'Angular',
+    'Bootstrap',
+    'Responsive Design',
+    'Accesibilidad'
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

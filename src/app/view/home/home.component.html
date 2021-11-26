@@ -1,41 +1,40 @@
 <div class="container">
     <div class="head">
-        Adrián Gómez Luna
+        <h2>
+            Adrián Gómez Luna
+        </h2>
     </div>
     <div class="subHead">
         <p>Developer</p>
         <p>NTT DATA</p>
     </div>
     <div class="datos">
-        <table>
-            <tr>
-                <td>Mail:</td>
-                <td>adrigoluna@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Teléfono:</td>
-                <td>+34 652 692 661</td>
-            </tr>
-            <tr>
-                <td>Estudios:</td>
-                <td>
-                    <ul>
-                        <ol>I.T. Informática de gestión</ol>
-                        <ol>CFGS DAW</ol>
-                    </ul>
-                </td>
-            </tr>
-        </table>
+        <div class="datos-sub">
+            <span>Mail:</span>
+            <span>adrigoluna@gmail.com</span>
+        </div>
+        <div class="datos-sub">
+            <span>Teléfono:</span>
+            <span>+34 652 692 661</span>
+        </div>
+        <div class="datos-sub">
+            <span>Estudios:</span>
+            <span>
+              <ol>
+                <li>I.T. Informática de gestión</li>
+                <li>CFGS DAW</li>
+              </ol>
+            </span>
+
+        </div>
     </div>
+    <p>
+        Competencias:
+    </p>
     <div class="competencias">
-        <div>HTML</div>
-        <div>SCSS</div>
-        <div>Javascript</div>
-        <div>TypeScript</div>
-        <div>Angular</div>
-        <div>Bootstrap</div>
-        <div>Responsive Design</div>
-        <div>Accesibilidad</div>
+        <div *ngFor="let item of competencias" class="compe-item">
+            {{ item }}
+        </div>
     </div>
 
 </div>
