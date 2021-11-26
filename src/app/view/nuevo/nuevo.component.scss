@@ -1,0 +1,54 @@
+.alerta {
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 10px;
+    button {
+        width: 50px;
+    }
+    .datos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .caja {
+            width: 25%;
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    form {
+        text-align: center;
+        .datos {
+            .caja {
+                text-align: start;
+                width: 50%;
+                input {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media ( max-width: 768px) {
+    form {
+        text-align: center;
+        button {
+            width: 200px;
+        }
+        .datos {
+            .caja {
+                text-align: start;
+                width: 100%;
+                input {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

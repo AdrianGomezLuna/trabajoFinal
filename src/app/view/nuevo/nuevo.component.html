@@ -1,1 +1,44 @@
-<p>nuevo works!</p>
+<div class="container">
+    <div class="alerta" *ngIf="messagge != ''">
+        <ngb-alert> {{ messagge }} </ngb-alert>
+    </div>
+
+    <form class="data-form" [formGroup]="reactiveForm">
+        <fieldset>
+            <legend>Crear Empleado</legend>
+            <div class="datos">
+                <div class="caja">
+                    <label>Nombre: </label>
+                    <p>
+                        <input type="text" id="employee_name" name="employee_name" formControlName="employee_name">
+                    </p>
+
+                    <!-- <span [hidden]="employee_name.dirty && employee_name.value !== ''" class="error-input">El nombre es obligatorio</span>
+            <span *ngIf="employee_name.errors?.minlength || employee_name.errors?.maxlength" class="error-input">Longitud entre 4 y 25 caractéres</span> -->
+                </div>
+                <div class="caja">
+                    <label>Salario: </label>
+                    <p>
+                        <input type="number" id="employee_salary" name="employee_salary" formControlName="employee_salary">
+                    </p>
+                    <!-- <span [hidden]="employee_salary.dirty && employee_salary.value !== ''" class="error-input">El nombre es obligatorio</span>
+          <span *ngIf="employee_salary.errors?.minlength || employee_salary.errors?.maxlength" class="error-input">Longitud entre 4 y 25 caractéres</span> -->
+                </div>
+                <div class="caja">
+                    <label>Edad: </label>
+                    <p>
+                        <input type="number" id="employee_age" name="employee_age" formControlName="employee_age">
+                    </p>
+                    <!-- <span [hidden]="employee_age.dirty && employee_age.value !== ''" class="error-input">El nombre es obligatorio</span>
+        <span *ngIf="employee_age.errors?.minlength || employee_age.errors?.maxlength" class="error-input">Longitud entre 4 y 25 caractéres</span> -->
+                </div>
+            </div>
+
+        </fieldset>
+
+
+        <button (click)="onSubmit()" [disabled]="!reactiveForm.valid">Crear</button>
+    </form>
+</div>
+
+<app-footer></app-footer>
