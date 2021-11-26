@@ -16,6 +16,6 @@ export class EmployeesService {
   }
 
   createEmployee(empleado: Employees): Observable<any> {
-    return this.http.post(environment.apiURL + 'create', empleado);
+    return this.http.post(environment.apiURL + 'create', JSON.stringify(empleado));
   }
 }

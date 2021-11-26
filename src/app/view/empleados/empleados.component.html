@@ -1,7 +1,7 @@
 <div class="container">
 
-    <div *ngIf="messagge!=''">
-        error
+    <div *ngIf="messagge!=''" class="alerta">
+        <ngb-alert> {{ messagge }} </ngb-alert>
     </div>
 
     <div *ngIf="messagge===''">

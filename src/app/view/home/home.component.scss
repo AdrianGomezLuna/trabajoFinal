@@ -1,18 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    list-style: none;
-    text-decoration: none;
-    border: none;
-    outline: none;
 }
 
 .container {
-    overflow-y: auto;
     width: 90%;
+    overflow-y: auto;
+    height: 65vh;
     margin-top: 10px;
     margin-left: 5%;
     .subHead {
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }
@@ -46,6 +44,7 @@
 
 @media (max-width: 1024px) {
     .container {
+        width: 90%;
         .competencias {
             .compe-item {
                 padding: 5px;

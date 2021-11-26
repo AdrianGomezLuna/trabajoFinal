@@ -4,9 +4,6 @@
 
 form {
     margin-top: 10px;
-    button {
-        width: 50px;
-    }
     .datos {
         display: flex;
         flex-wrap: wrap;
@@ -23,6 +20,9 @@ form {
 @media (max-width: 1024px) {
     form {
         text-align: center;
+        button {
+            width: 100px;
+        }
         .datos {
             .caja {
                 text-align: start;

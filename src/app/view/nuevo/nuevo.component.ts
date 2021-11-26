@@ -37,20 +37,19 @@ export class NuevoComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.reactiveForm);
     this.empleado.employee_name = this.reactiveForm.get('employee_name')?.value;
     this.empleado.employee_salary = this.reactiveForm.get('employee_salary')?.value;
     this.empleado.employee_age = this.reactiveForm.get('employee_age')?.value;
-    if (this.empleadosService.createEmployee(this.empleado)) {
-      console.log('Creado');
-      this.messagge = 'El empleado se creó correctamente';
-
-    } else {
-      console.log('No creado');
-      this.messagge = 'Error al crear el usuario';
-
-    }
-
+    this.empleadosService.createEmployee(this.empleado).subscribe(
+      (resp) => {
+        console.log('Respuesta',resp);
+        if (resp.status==="success") {
+        this.messagge = 'El empleado se creó correctamente';
+        } else {
+          this.messagge = 'Error al crear el usuario';
+        }
+      }
+    );
   }
 
   get employee_name() { return this.reactiveForm.get('employee_name');}

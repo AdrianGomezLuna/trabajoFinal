@@ -27,16 +27,18 @@ export class EmpleadosComponent implements OnInit {
         if (resp.status==="success") {
           this.empleados = resp.data;
         } else {
-          this.messagge = ' Error no se  puede acceder a la API'
+          this.messagge = ' Error no se  puede acceder a la API';
+          this.alertConfig.type = 'warning';
         }
       },
       (error) => {
-        console.error(error);
+        this.messagge = ' Error no se  puede acceder a la API';
+        this.alertConfig.type = 'warning';
       }
     )
-          // customize default values of alerts used by this component tree
-          this.alertConfig.type = 'success';
-          this.alertConfig.dismissible = false;
+    // customize default values of alerts used by this component tree
+    this.alertConfig.type = 'warning';
+    this.alertConfig.dismissible = false;
   }
 
 }
